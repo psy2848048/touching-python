@@ -4,7 +4,6 @@ Touching REST Client
 
 Python 사용자를 위한 터칭 REST API 연동 모듈입니다.
 
-* 아직 작동 확인 안했습니다.
 * 이용 중 발생한 문제에 대해 책임지지 않습니다.
 
 설치
