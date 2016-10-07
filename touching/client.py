@@ -5,8 +5,8 @@ import requests
 __all__ = ['TOUCHING_API_URL_TEST', 'Touching']
 __all__ = ['TOUCHING_API_URL_PROD', 'Touching']
 
-TOUCHING_API_URL_TEST = 'http://api­test.touchinga.com/'
-TOUCHING_API_URL_PROD = 'http://www.touchingpos.com/'
+TOUCHING_API_URL_TEST = 'http://api-test.touchinga.com'
+TOUCHING_API_URL_PROD = 'http://www.touchingpos.com'
 
 class Touching(object):
     def __init__(self, token, is_production=False):
@@ -40,7 +40,7 @@ class Touching(object):
     def get_headers(self):
         return {'Authorization': "Bearer {}".format(self.token)}
 
-    def find_point(self, tel):
+    def check_point(self, tel):
         url = "{}/api/v1/milecards".format(self.url)
         payload = {"tel": tel}
         return self._get(url, payload=payload)
